@@ -7,14 +7,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  background: #1e90ff;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px 20px;
-}
 
 nav a, .logo a {
   color: white;
@@ -114,7 +106,15 @@ h2{
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  
+  header {
+    background: #1e90ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
   .sepet-container {
     max-width: 300px;
     margin: 40px auto;
@@ -125,7 +125,13 @@ h2{
   }
 }
 @media screen and (min-width: 600px) {
-  
+  header {
+    background: #1e90ff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
   .sepet-container {
     max-width: 600px;
     margin: 40px auto;
