@@ -15,9 +15,12 @@ header {
   padding: 10px 20px;
 }
 
-nav a {
+nav a, .logo a {
   color: white;
   margin: 0 10px;
+  text-decoration: none;
+}
+.logo a {
   text-decoration: none;
 }
 
