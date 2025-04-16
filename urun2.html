@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>Kablosuz Kulaklık | E-Ticaret</title>
+  <title>Bluetooth Hoparlör | E-Ticaret</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,21 +17,19 @@
   </header>
 
   <div class="product-detail">
-    <h2>Ürün Adı: Kablosuz Kulaklık</h2>
-    <img src="https://plus.unsplash.com/premium_photo-1677838847804-4054143fb91a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lJTIwYmx1ZXRvb3RofGVufDB8fDB8fHww" alt="Kablosuz Kulaklık">
-    <p>Fiyat: ₺499</p>
-    <p>Açıklama: Yüksek kaliteli ses deneyimi sunan bluetooth kulaklık.</p>
+    <h2>Ürün Adı: Bluetooth Hoparlör</h2>
+    <img src="https://plus.unsplash.com/premium_photo-1683141496040-eeef9702269f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3BlYWtlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Bluetooth Hoparlör">
+    <p>Fiyat: ₺299</p>
+    <p>Açıklama: Şık tasarımlı, taşınabilir güçlü bluetooth hoparlör.</p>
     <button onclick="sepeteEkle()">Sepete Ekle</button>
   </div>
 
-  
-  <footer>
-    <p>© 2025 E-Ticaret</p>
-  </footer>
-  <script src="sepet.js"></script>
+  <footer><p>© 2025 E-Ticaret</p></footer>
+
+    <script src="sepet.js"></script>
   <script>
     function sepeteEkle() {
-      const urunAdi = "Kablosuz Kulaklık";
+      const urunAdi = "Bluetooth Hoparlör";
       let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
       sepet.push(urunAdi);
       localStorage.setItem("sepet", JSON.stringify(sepet));

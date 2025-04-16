@@ -2,12 +2,14 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <title>Sepet | E-Ticaret</title>
+  <title>Sepetim | E-Ticaret</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">🛒 E-Ticaret</div>
+    <div class="logo">
+      <a href="index.html">🛒 E-Ticaret</a>
+    </div>
     <nav>
       <a href="index.html">Ana Sayfa</a>
       <a href="kategori.html">Kategoriler</a>
@@ -15,16 +17,17 @@
       <a href="giris.html">Giriş</a>
     </nav>
   </header>
+  <main class="sepet-container">
+  
+    <h2>Sepetiniz</h2>
+    <ul id="sepetListesi"></ul>
+    <p id="bosMesaj" style="text-align:center; display:none;">Sepetiniz boş.</p>
+    <div style="text-align:center; margin-top:20px;">
+      <button onclick="sepetiTemizle()">Sepeti Temizle</button>
+    </div>
+  </main>
 
-  <h2>Sepetim</h2>
-  <ul>
-    <li>1 x Kulaklık - ₺499</li>
-  </ul>
-  <p>Toplam: ₺499</p>
-  <button onclick="alert('Ödeme sayfasına yönlendiriliyorsunuz')">Ödemeye Geç</button>
-
-  <footer>
-    <p>© 2025 E-Ticaret</p>
-  </footer>
+  <footer><p>© 2025 E-Ticaret</p></footer>
+  <script src="sepet.js"></script>
 </body>
 </html>
