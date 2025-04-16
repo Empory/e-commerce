@@ -113,13 +113,12 @@ function odemeYap() {
     return;
   }
 
-  // Burada gerçek ödeme API'si entegrasyonu yapılabilir.
-  alert(`Ödemeniz ₺${document.getElementById("toplamTutar").textContent} olarak başarılı bir şekilde alındı!`);
-
-  // Ödeme sonrası sepete ait verileri temizle
-  localStorage.removeItem("sepet");
-  sepetiYukle(); // Sepeti tekrar yükle (boş olacak)
+  // Toplam tutarı al ve yönlendirme yap
+  const toplam = document.getElementById("toplamTutar").textContent;
+  localStorage.setItem("odemeTutari", toplam);
+  window.location.href = "odeme.html";
 }
+
 
 // Sepeti temizleme fonksiyonu
 function sepetiTemizle() {

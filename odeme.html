@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ödeme | E-Ticaret</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">🛒 E-Ticaret</a></div>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="kategori.html">Kategoriler</a>
+      <a href="sepet.html">Sepet</a>
+      <a href="giris.html">Giriş</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Ödeme Bilgileri</h2>
+
+    <div style="text-align:center; margin-bottom:20px;">
+      <strong>Toplam Tutar: ₺<span id="gosterTutar">0</span></strong>
+    </div>
+
+    <form onsubmit="odemeTamamla(); return false;" style="text-align:center;">
+      <h3>Teslimat Bilgileri</h3>
+      <input type="text" placeholder="Ad Soyad" required /><br />
+      <input type="text" placeholder="Adres" required /><br />
+      <input type="text" placeholder="Şehir" required /><br />
+      <input type="text" placeholder="Posta Kodu" required /><br />
+      <input type="tel" placeholder="Telefon" required /><br /><br />
+
+      <h3>Kart Bilgileri</h3>
+      <input type="text" placeholder="Kart Üzerindeki İsim" required /><br />
+      <input type="text" placeholder="Kart Numarası" maxlength="19" required /><br />
+      <input type="text" placeholder="Son Kullanma Tarihi (AA/YY)" required /><br />
+      <input type="text" placeholder="CVV" maxlength="4" required /><br /><br />
+
+      <button type="submit">Ödemeyi Tamamla</button>
+    </form>
+  </main>
+
+  <footer><p>© 2025 E-Ticaret</p></footer>
+
+  <script>
+    // Tutarı göster
+    document.getElementById("gosterTutar").innerText = localStorage.getItem("odemeTutari") || "0";
+
+    function odemeTamamla() {
+      alert("Ödeme başarılı! Siparişiniz alınmıştır.");
+      localStorage.removeItem("sepet"); // Sepeti temizle
+      localStorage.removeItem("odemeTutari"); // Tutarı temizle
+      window.location.href = "index.html"; // Ana sayfaya dön
+    }
+  </script>
+</body>
+</html>
