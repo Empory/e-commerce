@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Giriş / Kayıt | E-Ticaret</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🛒 E-Ticaret</div>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="kategori.html">Kategoriler</a>
+      <a href="sepet.html">Sepet</a>
+      <a href="giris.html">Giriş</a>
+    </nav>
+  </header>
+
+  <h2>Giriş Yap</h2>
+  <form onsubmit="alert('Giriş başarılı!'); return false;">
+    <input type="email" placeholder="E-posta" required /><br />
+    <input type="password" placeholder="Şifre" required /><br />
+    <button type="submit">Giriş Yap</button>
+  </form>
+
+  <h2>Kayıt Ol</h2>
+  <form onsubmit="alert('Kayıt başarılı!'); return false;">
+    <input type="text" placeholder="Ad Soyad" required /><br />
+    <input type="email" placeholder="E-posta" required /><br />
+    <input type="password" placeholder="Şifre" required /><br />
+    <button type="submit">Kayıt Ol</button>
+  </form>
+
+  <footer>
+    <p>© 2025 E-Ticaret</p>
+  </footer>
+</body>
+</html>
