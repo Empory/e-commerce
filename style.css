@@ -109,15 +109,30 @@ form input {
 h2{
   text-align: center;
 }
-
-.sepet-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
-  border-radius: 8px;
+@media screen and (max-width: 600px) {
+  
+  .sepet-container {
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
 }
+@media screen and (min-width: 600px) {
+  
+  .sepet-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+}
+
+
 .sepet-container h2 {
   text-align: center;
 }

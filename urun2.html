@@ -28,14 +28,29 @@
   <footer><p>© 2025 E-Ticaret</p></footer>
 
     <script src="sepet.js"></script>
-  <script>
-    function sepeteEkle() {
-      const urunAdi = "Bluetooth Hoparlör";
+    <script>
+      // Sepete ekleme fonksiyonu
+      function sepeteEkle() {
+      const urunAdi = "Bluetooth Hoparlör"; // Ürün adı (bunu dinamik yapabilirsiniz)
+      const urunFiyat = 299; // Ürün fiyatı
       let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
-      sepet.push(urunAdi);
+
+      // Sepetteki ürünü bul
+      let urun = sepet.find(item => item.urunAdi === urunAdi);
+
+      if (urun) {
+        // Eğer ürün sepette varsa miktarı arttır
+        urun.miktar++;
+      } else {
+        // Eğer ürün sepette yoksa yeni bir ürün olarak ekle
+        sepet.push({ urunAdi, miktar: 1, fiyat: urunFiyat });
+      }
+
+      // Sepeti kaydet
       localStorage.setItem("sepet", JSON.stringify(sepet));
       alert("Sepete eklendi!");
+      sepetiYukle(); // Sepeti yeniden yükle
     }
-  </script>
+     </script>
 </body>
 </html>
